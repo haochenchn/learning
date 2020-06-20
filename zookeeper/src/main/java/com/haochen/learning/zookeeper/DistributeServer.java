@@ -34,7 +34,7 @@ public class DistributeServer {
 		
 		String path = zkClient.create("/test/servers/server", hostname.getBytes(), Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
 		
-		System.out.println(hostname +"is online ");
+		System.out.println(hostname +" is online ");
 		
 	}
 

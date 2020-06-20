@@ -50,7 +50,7 @@ public class TestZookeeper {
 	@Test
 	public void createNode() throws KeeperException, InterruptedException{
 		
-		String path = zkClient.create("/test", "qqqwww".getBytes(), Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
+		String path = zkClient.create("/test/servers", "no".getBytes(), Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
 		
 		System.out.println(path);
 		
