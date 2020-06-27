@@ -8,7 +8,7 @@ public class CustomProducer {
 	public static void main(String[] args) {
 		Properties props = new Properties();
 		// Kafka服务端的主机名和端口号
-		props.put("bootstrap.servers", "linux01:9092");
+		props.put("bootstrap.servers", "node01:9092");
 		// 等待所有副本节点的应答
 		props.put("acks", "all");
 		// 消息发送最大尝试次数
@@ -26,7 +26,7 @@ public class CustomProducer {
 
 		KafkaProducer<String, String> producer = new KafkaProducer<>(props);
 		for (int i = 0; i < 50; i++) {
-			producer.send(new ProducerRecord<String, String>("test1", Integer.toString(i), "hello world-" + i));
+			producer.send(new ProducerRecord<String, String>("first", Integer.toString(i), "hello world-" + i));
 		}
 
 		producer.close();

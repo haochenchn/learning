@@ -1,6 +1,6 @@
 # learning
 学无止境
-
+## 一、Zookeeper
 #### Zookeeper中的配置文件zoo.cfg中参数含义解读如下：
 - 1．tickTime =2000：通信心跳数，Zookeeper服务器与客户端心跳时间，单位毫秒
 Zookeeper使用的基本时间，服务器之间或客户端与服务器之间维持心跳的时间间隔，也就是每个tickTime时间就会发送一个心跳，时间单位为毫秒。
@@ -31,3 +31,5 @@ Zookeeper使用的基本时间，服务器之间或客户端与服务器之间�
 - （1）部署方式单机模式、集群模式
 - （2）角色：Leader和Follower, 还有Observer? 但是Observer不参与选举。
 - （3）集群最少需要机器数：3
+
+## 二、Kafka
