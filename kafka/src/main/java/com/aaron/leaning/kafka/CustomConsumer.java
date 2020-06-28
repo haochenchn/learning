@@ -1,4 +1,4 @@
-package com.haochen.leaning.kafka;
+package com.aaron.leaning.kafka;
 
 import java.util.Arrays;
 import java.util.Properties;
@@ -6,6 +6,18 @@ import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 
+/**
+ * kafka消费demo(高级API)
+ * 1）高级API优点
+ * 高级API 写起来简单
+ * 不需要自行去管理offset，系统通过zookeeper自行管理。
+ * 不需要管理分区，副本等情况，系统自动管理。
+ * 消费者断线会自动根据上一次记录在zookeeper中的offset去接着获取数据（默认设置1分钟更新一下zookeeper中存的offset）
+ * 可以使用group来区分对同一个topic 的不同程序访问分离开来（不同的group记录不同的offset，这样不同程序读取同一个topic才不会因为offset互相影响）
+ * 2）高级API缺点
+ * 不能自行控制offset（对于某些特殊需求来说）
+ * 不能细化控制如分区、副本、zk等
+ */
 public class CustomConsumer {
 	public static void main(String[] args) {
 		Properties props = new Properties();

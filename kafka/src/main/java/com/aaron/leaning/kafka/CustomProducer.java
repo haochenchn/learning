@@ -1,4 +1,4 @@
-package com.haochen.leaning.kafka;
+package com.aaron.leaning.kafka;
 
 import java.util.Properties;
 import org.apache.kafka.clients.producer.KafkaProducer;

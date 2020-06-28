@@ -1,4 +1,4 @@
-package com.haochen.leaning.kafka;
+package com.aaron.leaning.kafka;
 
 import java.util.Properties;
 
@@ -12,7 +12,7 @@ public class CallBackProducer {
 	public static void main(String[] args) throws InterruptedException {
 		Properties props = new Properties();
 		// Kafka服务端的主机名和端口号
-		props.put("bootstrap.servers", "linux01:9092,linux02:9092,linux03:9092");
+		props.put("bootstrap.servers", "node01:9092,node02:9092,node03:9092");
 		// 等待所有副本节点的应答
 		props.put("acks", "all");
 		// 消息发送最大尝试次数
@@ -34,7 +34,7 @@ public class CallBackProducer {
 
 		for (int i = 0; i < 50; i++) {
 			Thread.sleep(500);
-			kafkaProducer.send(new ProducerRecord<String, String>("test1", "hh" + i), new Callback() {
+			kafkaProducer.send(new ProducerRecord<String, String>("first", "hh" + i), new Callback() {
 				@Override
 				public void onCompletion(RecordMetadata metadata, Exception exception) {
 
