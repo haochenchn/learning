@@ -12,6 +12,7 @@
         <module>zookeeper</module>
         <module>kafka</module>
         <module>sync</module>
+        <module>spring</module>
     </modules>
 
     <dependencies>
