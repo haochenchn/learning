@@ -11,7 +11,7 @@
     <modules>
         <module>zookeeper</module>
         <module>kafka</module>
-        <module>sync</module>
+        <module>multiThread</module>
         <module>spring</module>
     </modules>
 
