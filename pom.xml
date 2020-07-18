@@ -13,6 +13,7 @@
         <module>kafka</module>
         <module>multithread</module>
         <module>spring</module>
+        <module>connectionpool</module>
     </modules>
 
     <dependencies>
