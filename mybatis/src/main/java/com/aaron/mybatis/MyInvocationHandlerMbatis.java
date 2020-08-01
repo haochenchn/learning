@@ -35,7 +35,7 @@ public class MyInvocationHandlerMbatis implements InvocationHandler {
 			return extInsert(extInsert, proxy, method, args);
 		}
 		// 2.查询的思路
-		// 1. 判断方法上是否存 在注解
+		// 1. 判断方法上是否存在@ExtSelect注解
 		ExtSelect extSelect = method.getDeclaredAnnotation(ExtSelect.class);
 		if (extSelect != null) {
 			// 2. 获取注解上查询的SQL语句
